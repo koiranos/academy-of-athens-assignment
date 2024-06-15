@@ -1,7 +1,26 @@
+import { useEffect, useState } from "react";
 import academiaLogo from "../assets/akadimia_Logo.png";
 import NavigationBar from "./navigationBar";
+import axios from "axios";
 
 function HeaderSection() {
+  const [mainData, setMainData] = useState<any>();
+
+  const getMenuData = async () => {
+    const data = await axios
+      .get("https://academyofathens-latest-cms.dotsoft.gr/api/el/menu/main")
+      .then((response) => response.data)
+      .catch((error) => {
+        console.log(error);
+      });
+
+    setMainData(data);
+  };
+
+  useEffect(() => {
+    getMenuData();
+  }, []);
+
   return (
     <div>
       <div style={{ backgroundColor: "#003049" }}>
@@ -19,7 +38,7 @@ function HeaderSection() {
           />
         </div>
       </div>
-      <NavigationBar />
+      <NavigationBar navData={mainData} />
     </div>
   );
 }

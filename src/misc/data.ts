@@ -1,541 +1,3 @@
-export const mainData = {
-  code: 200,
-  lang: "el",
-  items: [
-    {
-      id: 651,
-      name: "Η Ακαδημία",
-      url: "/",
-      weight: 55,
-      side_menu: false,
-      submenu: [
-        {
-          id: 659,
-          name: "Ίδρυση",
-          url: "",
-          parent: 651,
-          weight: 0,
-          side_menu: false,
-          submenu: [
-            {
-              id: 677,
-              name: "Ιστορικό",
-              url: "/academy/istoriko",
-              parent: 659,
-              weight: 0,
-            },
-            {
-              id: 678,
-              name: "Σκοπός",
-              url: "/academy/skopos",
-              parent: 659,
-              weight: 1,
-            },
-            {
-              id: 679,
-              name: "Ακαδημαϊκοί από τη σύσταση της Ακαδημίας",
-              url: "/academy/akadimaikoi-apo-ti-systasi-tis-akadimias",
-              parent: 659,
-              weight: 2,
-            },
-            {
-              id: 881,
-              name: "Τα μέλη της Ακαδημίας Αθηνών",
-              url: "/academy/ta-meli-tis-akadimias-athinon-kata-arhaiotita",
-              parent: 659,
-              weight: 3,
-            },
-          ],
-        },
-        {
-          id: 660,
-          name: "Μέλη",
-          url: "/academy/ta-meli-tis-akadimias-athinon",
-          parent: 651,
-          weight: 1,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 661,
-          name: "Οργάνωση",
-          url: "",
-          parent: 651,
-          weight: 3,
-          side_menu: true,
-          submenu: [
-            {
-              id: 697,
-              name: "Αρχές",
-              url: "/academy/arhes",
-              parent: 661,
-              weight: 0,
-            },
-            {
-              id: 698,
-              name: "Τάξεις",
-              url: "/academy/taxeis",
-              parent: 661,
-              weight: 1,
-            },
-            {
-              id: 699,
-              name: "Ολομέλεια",
-              url: "/academy/olomeleia",
-              parent: 661,
-              weight: 2,
-            },
-            {
-              id: 700,
-              name: "Συμβούλια - Επιτροπές",
-              url: "/academy/symboylia-epitropes",
-              parent: 661,
-              weight: 3,
-            },
-          ],
-        },
-        {
-          id: 662,
-          name: "Διοίκηση - Υπηρεσίες",
-          url: "/academy/dioikisi",
-          parent: 651,
-          weight: 4,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 663,
-          name: "Κανονισμός",
-          url: "/academy/kanonismos",
-          parent: 651,
-          weight: 5,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 664,
-          name: "Ευεργέτες - Δωρητές - Αθλοθέτες",
-          url: "",
-          parent: 651,
-          weight: 6,
-          side_menu: false,
-          submenu: [
-            {
-              id: 684,
-              name: "Ευεργέτες",
-              url: "/academy/eyergetes",
-              parent: 664,
-              weight: 0,
-            },
-            {
-              id: 685,
-              name: "Μεγάλοι Δωρητές",
-              url: "/academy/megaloi-dorites",
-              parent: 664,
-              weight: 1,
-            },
-            {
-              id: 686,
-              name: "Δωρητές",
-              url: "/academy/dorites",
-              parent: 664,
-              weight: 2,
-            },
-            {
-              id: 687,
-              name: "Αθλοθέτες",
-              url: "/academy/athlothetes",
-              parent: 664,
-              weight: 3,
-            },
-          ],
-        },
-        {
-          id: 665,
-          name: "Εποπτευόμενα Ιδρύματα",
-          url: "/academy/categories/665",
-          parent: 651,
-          weight: 7,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 666,
-          name: "Διεθνές Ενώσεις",
-          url: "/academy/categories/666",
-          parent: 651,
-          weight: 8,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 667,
-          name: "Επιτροπή Ισότητας των Φύλων",
-          url: "/academy/epitropi-isotitas-ton-fylon",
-          parent: 651,
-          weight: 9,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 680,
-          name: "Μέγαρο",
-          url: "",
-          parent: 651,
-          weight: 2,
-          side_menu: true,
-          submenu: [
-            {
-              id: 681,
-              name: "Εισαγωγή",
-              url: "/academy/eisagogi",
-              parent: 680,
-              weight: 0,
-            },
-            {
-              id: 682,
-              name: "Εξωτερικό",
-              url: "/academy/exoteriko",
-              parent: 680,
-              weight: 1,
-            },
-            {
-              id: 683,
-              name: "Εσωτερικό",
-              url: "/academy/esoteriko",
-              parent: 680,
-              weight: 2,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: 652,
-      name: "Έρευνα",
-      url: "",
-      weight: 56,
-      side_menu: false,
-      submenu: [
-        {
-          id: 668,
-          name: "Ερευνητικά Κέντρα",
-          url: "",
-          parent: 652,
-          weight: 0,
-          side_menu: false,
-          submenu: [
-            {
-              id: 882,
-              name: "Κέντρον Ερεύνης των Νεοελληνικών Διαλέκτων και Ιδιωμάτων - Ι.Λ.Ν.Ε.",
-              url: "",
-              parent: 668,
-              weight: 0,
-            },
-          ],
-        },
-        {
-          id: 669,
-          name: "Ερευνητικά Γραφεία",
-          url: "",
-          parent: 652,
-          weight: 1,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 670,
-          name: "Ερευνητικά Προγράμματα",
-          url: "",
-          parent: 652,
-          weight: 2,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 671,
-          name: "Ερευνητικές Υποδομές",
-          url: "",
-          parent: 652,
-          weight: 3,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 672,
-          name: "Επιτροπή Ερευνών",
-          url: "",
-          parent: 652,
-          weight: 4,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 673,
-          name: "Επιστημονικό Συμβούλιο (Ε.Σ.Ε.Κ.Α.Α.)",
-          url: "",
-          parent: 652,
-          weight: 5,
-          side_menu: false,
-          submenu: [],
-        },
-      ],
-    },
-    {
-      id: 653,
-      name: "Δημοσιεύματα",
-      url: "/publications",
-      weight: 57,
-      side_menu: false,
-      submenu: [
-        {
-          id: 674,
-          name: "Έντυπα",
-          url: "/publications",
-          parent: 653,
-          weight: 0,
-          side_menu: true,
-          submenu: [
-            {
-              id: 689,
-              name: "Πρακτικά",
-              url: "/publication/praktika",
-              parent: 674,
-              weight: 0,
-            },
-            {
-              id: 690,
-              name: "Μνημεία της Ελληνικής Ιστορίας",
-              url: "/publication/mnimeia-tis-ellinikis-istorias",
-              parent: 674,
-              weight: 1,
-            },
-            {
-              id: 691,
-              name: "Ελληνική βιβλιοθήκη",
-              url: "/publication/elliniki-bibliothiki",
-              parent: 674,
-              weight: 2,
-            },
-            {
-              id: 692,
-              name: "Διάφορες εκδόσεις",
-              url: "/publication/diafores-ekdoseis",
-              parent: 674,
-              weight: 3,
-            },
-            {
-              id: 693,
-              name: "Δημοσιεύματα Κέντρων Ερευνών",
-              url: "/publication/dimosieymata-kentron-ereynon",
-              parent: 674,
-              weight: 4,
-            },
-            {
-              id: 694,
-              name: "Εκδόσεις του Ιδρύματος Κώστα και Ελένης Ουράνη",
-              url: "/publication/ekdoseis-toy-idrymatos-kosta-kai-elenis-oyrani",
-              parent: 674,
-              weight: 5,
-            },
-            {
-              id: 695,
-              name: "Εκδόσεις της Επιτροπής Ερευνών",
-              url: "/publication/ekdoseis-tis-epitropis-ereynon",
-              parent: 674,
-              weight: 6,
-            },
-            {
-              id: 696,
-              name: "Εκδόσεις υπό την Αιγίδα της Διεθνούς Ενώσεως Κλασικής  Αρχαιολογίας και της Διεθνούς Ενώσεως Ακαδημιών",
-              url: "/publication/ekdoseis-ypo-tin-aigida-tis-diethnoys-enoseos-klasikis-arhaiologias-kai-tis-diethnoys",
-              parent: 674,
-              weight: 7,
-            },
-          ],
-        },
-        {
-          id: 675,
-          name: "Ηλεκτρονικά",
-          url: "/publication/ilektronika-dimosieymata",
-          parent: 653,
-          weight: 1,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 676,
-          name: "Το Βιβλιοπωλείο της Ακαδημίας Αθηνών",
-          url: "/publication/bibliopoleio-tis-akadimias-athinon",
-          parent: 653,
-          weight: 2,
-          side_menu: false,
-          submenu: [],
-        },
-      ],
-    },
-    {
-      id: 654,
-      name: "Βραβεία",
-      url: "/awards",
-      weight: 58,
-      side_menu: false,
-      submenu: [],
-    },
-    {
-      id: 655,
-      name: "Υποτροφίες",
-      url: "/scholarships",
-      weight: 59,
-      side_menu: false,
-      submenu: [],
-    },
-    {
-      id: 656,
-      name: "Βιβλιοθήκη",
-      url: "",
-      weight: 60,
-      side_menu: true,
-      submenu: [
-        {
-          id: 873,
-          name: "Γενικές Πληροφορίες",
-          url: "/libraries/categories/867",
-          parent: 656,
-          weight: 1,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 874,
-          name: "Ξεναγήσεις",
-          url: "/libraries/categories/872",
-          parent: 656,
-          weight: 3,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 875,
-          name: "Νέες Προσκτήσεις",
-          url: "/libraries/categories/871",
-          parent: 656,
-          weight: 2,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 876,
-          name: "Ανακοινώσεις",
-          url: "/libraries/categories/870",
-          parent: 656,
-          weight: 0,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 877,
-          name: "Χρήσιμες Συνδέσεις",
-          url: "/libraries/categories/869",
-          parent: 656,
-          weight: 5,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 878,
-          name: "Συλλογές Υλικού",
-          url: "/libraries/categories/868",
-          parent: 656,
-          weight: 4,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 879,
-          name: "Επιπλέον Πληροφορίες",
-          url: "/libraries/categories/880",
-          parent: 656,
-          weight: 6,
-          side_menu: false,
-          submenu: [],
-        },
-      ],
-    },
-    {
-      id: 657,
-      name: "Ανακοινώσεις",
-      url: "/announcements",
-      weight: 61,
-      side_menu: true,
-      submenu: [
-        {
-          id: 861,
-          name: "Δελτία Τύπου",
-          url: "/announcements/categories/855",
-          parent: 657,
-          weight: 0,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 862,
-          name: "Συνεδρίες",
-          url: "/announcements/categories/856",
-          parent: 657,
-          weight: 1,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 863,
-          name: "Εκδηλώσεις",
-          url: "/announcements/categories/857",
-          parent: 657,
-          weight: 2,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 864,
-          name: "Προκηρύξεις",
-          url: "/announcements/categories/858",
-          parent: 657,
-          weight: 3,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 865,
-          name: "Δημοπρασίες",
-          url: "/announcements/categories/859",
-          parent: 657,
-          weight: 4,
-          side_menu: false,
-          submenu: [],
-        },
-        {
-          id: 866,
-          name: "Ανακοινώσεις Υποτροφιών",
-          url: "/announcements/categories/860",
-          parent: 657,
-          weight: 5,
-          side_menu: false,
-          submenu: [],
-        },
-      ],
-    },
-    {
-      id: 658,
-      name: "Ψηφιακή Ακαδημία",
-      url: "http://repository.academyofathens.gr",
-      weight: 62,
-      side_menu: false,
-      submenu: [],
-    },
-  ],
-};
-
 export const pageContent = {
   home: {
     welcome: {
@@ -549,86 +11,112 @@ export const pageContent = {
       centers: [
         {
           title: "Κέντρον Ερεύνης της Αρχαιότητος",
-          url: "#"
+          url: "#",
         },
         {
           title: "Κέντρο Ερεύνης Φυσικής της Ατμόσφαιρας και Κλιματολογίας",
-          url: "#"
+          url: "#",
         },
         {
           title: "Κέντρον Ερεύνης της Ελληνικής Λαογραφίας",
-          url: "#"
+          url: "#",
         },
         {
           title: "Κέντρον Ερεύνης Νεοελληνικών Διαλέκτων και Ιδιωμάτων Ι.Λ.Ν.Ε",
-          url: "#"
+          url: "#",
         },
-      ]
+      ],
     },
     news: {
       title: "Τα Νέα μας",
-      categories: [{label: "Εκδηλώσεις", value: "events"},{label: "Διαλέξεις", value: "lectures"},{label: "Ανακοινώσεις", value: "announcements"}],
+      categories: [
+        { label: "Εκδηλώσεις", value: "events" },
+        { label: "Διαλέξεις", value: "lectures" },
+        { label: "Ανακοινώσεις", value: "announcements" },
+      ],
       items: {
         events: [
           {
             tag: "Ακαδημία Αθηνών",
-            title: "Πανηγυρική Συνεδρία για τον Εορτασμό της Επετείου της 28ης Οκτωβρίου 1940...",
+            title:
+              "Πανηγυρική Συνεδρία για τον Εορτασμό της Επετείου της 28ης Οκτωβρίου 1940...",
             date: "23 Οκτωβρίου 2023",
-            summary: "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
-            image: "https://s3-alpha-sig.figma.com/img/3983/3d1b/eaea17cc498c2bcbfb3c42f648ea3645?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WCfYdzINc94p-74yBaNGvLrRBf2rJNmOj7XLg0-qav9TZ6Zw4bi8aAzS7plKZpHAUedvUA3UtdfNU4MUG5lDAnuDTA4wdNKqKb09HHxiLHJ4l~oPscsjviDsW5NUbuxOlm-5JtN7ChYuJJBPwZhkqVEU2kRJJguS~Mf5Sj5~vMC3W2uA4rB4RNxDGpES-sIhS8lYQFge8Bi7M72y7arr6uBdelZfbmqzVoCk2lc7regofC9k6yKvj92TTYrvmQFN~PwlcWVSoeKemQSukp~6CrEgGaNlauSyI83KMXT66NlfyihK3GPPsQaImYfMh~n2H2fzQciquUQUnslpFxnZTQ__"
+            summary:
+              "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
+            image:
+              "https://s3-alpha-sig.figma.com/img/3983/3d1b/eaea17cc498c2bcbfb3c42f648ea3645?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WCfYdzINc94p-74yBaNGvLrRBf2rJNmOj7XLg0-qav9TZ6Zw4bi8aAzS7plKZpHAUedvUA3UtdfNU4MUG5lDAnuDTA4wdNKqKb09HHxiLHJ4l~oPscsjviDsW5NUbuxOlm-5JtN7ChYuJJBPwZhkqVEU2kRJJguS~Mf5Sj5~vMC3W2uA4rB4RNxDGpES-sIhS8lYQFge8Bi7M72y7arr6uBdelZfbmqzVoCk2lc7regofC9k6yKvj92TTYrvmQFN~PwlcWVSoeKemQSukp~6CrEgGaNlauSyI83KMXT66NlfyihK3GPPsQaImYfMh~n2H2fzQciquUQUnslpFxnZTQ__",
           },
           {
             tag: "Κέντρον Ερεύνης της Ελληνικής Λαογραφίας",
-            title: "Πανηγυρική Συνεδρία για τον Εορτασμό της Επετείου της 28ης Οκτωβρίου 1940, Πέμπτη 26 Οκτωβρίου 2023 και ώρα 19.00",
+            title:
+              "Πανηγυρική Συνεδρία για τον Εορτασμό της Επετείου της 28ης Οκτωβρίου 1940, Πέμπτη 26 Οκτωβρίου 2023 και ώρα 19.00",
             date: "23 Οκτωβρίου 2023",
-            summary: "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
-            image: "https://s3-alpha-sig.figma.com/img/9f2a/fc4b/2d3dd5d29341b759d45c8342aa892403?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=U5yJ1Xq0Sl7giAtNO03p8JXHv7XCfixty-lZiVsvBCbXGxOnCiCw04GYQkFZk~CvX70qdmLHKXvuCALhzsguNsiysDp5GREXLX9~~DX3PW2im9mCzX1RYcBg9uXCXmVHewQvb3BRiRQ-E5wC3qVZXcb3kH74h8SohR0xI4scpJ7pcsUWxSBPHXexDAtFizUPgUuq2PhupxYpt0Q29GDWzMr6wmMsdie3sO1qanlVXPw1HbpUezWSCQNSmpAnBqhVHDmBsZ4jJgQB6ARssGUksgtm1hOouS45f7-f3pjYcQYB3j-ZarjkP7FTNY6sbqVrl4BZqm9Z5Fo8FxQ3MuufHw__"
+            summary:
+              "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
+            image:
+              "https://s3-alpha-sig.figma.com/img/9f2a/fc4b/2d3dd5d29341b759d45c8342aa892403?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=U5yJ1Xq0Sl7giAtNO03p8JXHv7XCfixty-lZiVsvBCbXGxOnCiCw04GYQkFZk~CvX70qdmLHKXvuCALhzsguNsiysDp5GREXLX9~~DX3PW2im9mCzX1RYcBg9uXCXmVHewQvb3BRiRQ-E5wC3qVZXcb3kH74h8SohR0xI4scpJ7pcsUWxSBPHXexDAtFizUPgUuq2PhupxYpt0Q29GDWzMr6wmMsdie3sO1qanlVXPw1HbpUezWSCQNSmpAnBqhVHDmBsZ4jJgQB6ARssGUksgtm1hOouS45f7-f3pjYcQYB3j-ZarjkP7FTNY6sbqVrl4BZqm9Z5Fo8FxQ3MuufHw__",
           },
           {
             tag: "Κέντρον Ερεύνης της Ελληνικής Λαογραφίας",
-            title: "Πανηγυρική Συνεδρία για τον Εορτασμό της Επετείου της 28ης Οκτωβρίου 1940...",
+            title:
+              "Πανηγυρική Συνεδρία για τον Εορτασμό της Επετείου της 28ης Οκτωβρίου 1940...",
             date: "23 Οκτωβρίου 2023",
-            summary: "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
-            image: "https://s3-alpha-sig.figma.com/img/7820/f15f/4f354329de8ad41549f4d4fb649a0f02?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QC4pBTTD~fOI30jGO1zkbevBpjk5B6GLbNR5sUpXUKJIexSuveVBmivKboVzh8OhSoaBx496DgJm8FBRx9M8Y1QxIiIEgN-3BDQfxa55zgn8lolJfiZfSKdN6EM7F3QBfasG8eHF1ombRFXqqQKFrdSrVkpHVELFARSGGOhmcCmMf2zapSGh7cJ52ZVPqZR8pfSnN1lfRLW4LLIdGO115tUqKgl36QueUv4WgLDj4W0O7zRBZYTPPk~8XtXlDF0dS6JMebNWZYRoFp8pM54GLxuAqgyWDcP0ih5VRiBiT0YfNtQDvu27ESuLL6mfXPHO7YFvyJzwOKbGflvZgUXakQ__"
+            summary:
+              "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
+            image:
+              "https://s3-alpha-sig.figma.com/img/7820/f15f/4f354329de8ad41549f4d4fb649a0f02?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QC4pBTTD~fOI30jGO1zkbevBpjk5B6GLbNR5sUpXUKJIexSuveVBmivKboVzh8OhSoaBx496DgJm8FBRx9M8Y1QxIiIEgN-3BDQfxa55zgn8lolJfiZfSKdN6EM7F3QBfasG8eHF1ombRFXqqQKFrdSrVkpHVELFARSGGOhmcCmMf2zapSGh7cJ52ZVPqZR8pfSnN1lfRLW4LLIdGO115tUqKgl36QueUv4WgLDj4W0O7zRBZYTPPk~8XtXlDF0dS6JMebNWZYRoFp8pM54GLxuAqgyWDcP0ih5VRiBiT0YfNtQDvu27ESuLL6mfXPHO7YFvyJzwOKbGflvZgUXakQ__",
           },
           {
             tag: "Κέντρον Ερεύνης της Ελληνικής Φιλοσοφίας",
             title: "Πανηγυρική Συνεδρία για τον Εορτασμό της Επετείου",
             date: "23 Οκτωβρίου 2023",
-            summary: "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
-            image: "https://s3-alpha-sig.figma.com/img/d8c0/5123/cb94633149b6a4ffaf91d68921482bfb?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iglD42em8H7MjF0K45x4eQsPCzsmVcEtgvwP1xU58YdX9PeE-pD38Vmms9zab-uZGCbQCwPzbb0xcwQM8xtHl3fBWZWaIC4t610kG4nukOJosbIaHThzdEGVUsxx65SCFU9S17GmypQVKh3tExf7384fGRhW2lJg1ztfm2Js7BUIC5NWAJCW-rMXuF1WPo3gGg54F79f0T8i58D9GwGjlfIERTNtN8QikwHdKH27ysfk3HL2Bt0-NXvK1Nx-1OCuO-i8M7nYOm4VV2Y~qshF1qvYvy1VuHVFu-kEE3ADpP3eG5cYGtRCg6WDZvr85wLynXGZip8EcRVTlbkOefy4HA__"
+            summary:
+              "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
+            image:
+              "https://s3-alpha-sig.figma.com/img/d8c0/5123/cb94633149b6a4ffaf91d68921482bfb?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iglD42em8H7MjF0K45x4eQsPCzsmVcEtgvwP1xU58YdX9PeE-pD38Vmms9zab-uZGCbQCwPzbb0xcwQM8xtHl3fBWZWaIC4t610kG4nukOJosbIaHThzdEGVUsxx65SCFU9S17GmypQVKh3tExf7384fGRhW2lJg1ztfm2Js7BUIC5NWAJCW-rMXuF1WPo3gGg54F79f0T8i58D9GwGjlfIERTNtN8QikwHdKH27ysfk3HL2Bt0-NXvK1Nx-1OCuO-i8M7nYOm4VV2Y~qshF1qvYvy1VuHVFu-kEE3ADpP3eG5cYGtRCg6WDZvr85wLynXGZip8EcRVTlbkOefy4HA__",
           },
-      ],
+        ],
         lectures: [
           {
             tag: "Κέντρον Ερεύνης της Ελληνικής Λαογραφίας",
-            title: "Πανηγυρική Συνεδρία για τον Εορτασμό της Επετείου της 28ης Οκτωβρίου 1940, Πέμπτη 26 Οκτωβρίου 2023 και ώρα 19.00",
+            title:
+              "Πανηγυρική Συνεδρία για τον Εορτασμό της Επετείου της 28ης Οκτωβρίου 1940, Πέμπτη 26 Οκτωβρίου 2023 και ώρα 19.00",
             date: "23 Οκτωβρίου 2023",
-            summary: "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
-            image: "https://s3-alpha-sig.figma.com/img/9f2a/fc4b/2d3dd5d29341b759d45c8342aa892403?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=U5yJ1Xq0Sl7giAtNO03p8JXHv7XCfixty-lZiVsvBCbXGxOnCiCw04GYQkFZk~CvX70qdmLHKXvuCALhzsguNsiysDp5GREXLX9~~DX3PW2im9mCzX1RYcBg9uXCXmVHewQvb3BRiRQ-E5wC3qVZXcb3kH74h8SohR0xI4scpJ7pcsUWxSBPHXexDAtFizUPgUuq2PhupxYpt0Q29GDWzMr6wmMsdie3sO1qanlVXPw1HbpUezWSCQNSmpAnBqhVHDmBsZ4jJgQB6ARssGUksgtm1hOouS45f7-f3pjYcQYB3j-ZarjkP7FTNY6sbqVrl4BZqm9Z5Fo8FxQ3MuufHw__"
+            summary:
+              "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
+            image:
+              "https://s3-alpha-sig.figma.com/img/9f2a/fc4b/2d3dd5d29341b759d45c8342aa892403?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=U5yJ1Xq0Sl7giAtNO03p8JXHv7XCfixty-lZiVsvBCbXGxOnCiCw04GYQkFZk~CvX70qdmLHKXvuCALhzsguNsiysDp5GREXLX9~~DX3PW2im9mCzX1RYcBg9uXCXmVHewQvb3BRiRQ-E5wC3qVZXcb3kH74h8SohR0xI4scpJ7pcsUWxSBPHXexDAtFizUPgUuq2PhupxYpt0Q29GDWzMr6wmMsdie3sO1qanlVXPw1HbpUezWSCQNSmpAnBqhVHDmBsZ4jJgQB6ARssGUksgtm1hOouS45f7-f3pjYcQYB3j-ZarjkP7FTNY6sbqVrl4BZqm9Z5Fo8FxQ3MuufHw__",
           },
           {
             tag: "Κέντρον Ερεύνης της Ελληνικής Λαογραφίας",
-            title: "Πανηγυρική Συνεδρία για τον Εορτασμό της Επετείου της 28ης Οκτωβρίου 1940...",
+            title:
+              "Πανηγυρική Συνεδρία για τον Εορτασμό της Επετείου της 28ης Οκτωβρίου 1940...",
             date: "23 Οκτωβρίου 2023",
-            summary: "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
-            image: "https://s3-alpha-sig.figma.com/img/7820/f15f/4f354329de8ad41549f4d4fb649a0f02?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QC4pBTTD~fOI30jGO1zkbevBpjk5B6GLbNR5sUpXUKJIexSuveVBmivKboVzh8OhSoaBx496DgJm8FBRx9M8Y1QxIiIEgN-3BDQfxa55zgn8lolJfiZfSKdN6EM7F3QBfasG8eHF1ombRFXqqQKFrdSrVkpHVELFARSGGOhmcCmMf2zapSGh7cJ52ZVPqZR8pfSnN1lfRLW4LLIdGO115tUqKgl36QueUv4WgLDj4W0O7zRBZYTPPk~8XtXlDF0dS6JMebNWZYRoFp8pM54GLxuAqgyWDcP0ih5VRiBiT0YfNtQDvu27ESuLL6mfXPHO7YFvyJzwOKbGflvZgUXakQ__"
+            summary:
+              "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
+            image:
+              "https://s3-alpha-sig.figma.com/img/7820/f15f/4f354329de8ad41549f4d4fb649a0f02?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QC4pBTTD~fOI30jGO1zkbevBpjk5B6GLbNR5sUpXUKJIexSuveVBmivKboVzh8OhSoaBx496DgJm8FBRx9M8Y1QxIiIEgN-3BDQfxa55zgn8lolJfiZfSKdN6EM7F3QBfasG8eHF1ombRFXqqQKFrdSrVkpHVELFARSGGOhmcCmMf2zapSGh7cJ52ZVPqZR8pfSnN1lfRLW4LLIdGO115tUqKgl36QueUv4WgLDj4W0O7zRBZYTPPk~8XtXlDF0dS6JMebNWZYRoFp8pM54GLxuAqgyWDcP0ih5VRiBiT0YfNtQDvu27ESuLL6mfXPHO7YFvyJzwOKbGflvZgUXakQ__",
           },
           {
             tag: "Κέντρον Ερεύνης της Ελληνικής Φιλοσοφίας",
             title: "Πανηγυρική Συνεδρία για τον Εορτασμό της Επετείου",
             date: "23 Οκτωβρίου 2023",
-            summary: "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
-            image: "https://s3-alpha-sig.figma.com/img/d8c0/5123/cb94633149b6a4ffaf91d68921482bfb?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iglD42em8H7MjF0K45x4eQsPCzsmVcEtgvwP1xU58YdX9PeE-pD38Vmms9zab-uZGCbQCwPzbb0xcwQM8xtHl3fBWZWaIC4t610kG4nukOJosbIaHThzdEGVUsxx65SCFU9S17GmypQVKh3tExf7384fGRhW2lJg1ztfm2Js7BUIC5NWAJCW-rMXuF1WPo3gGg54F79f0T8i58D9GwGjlfIERTNtN8QikwHdKH27ysfk3HL2Bt0-NXvK1Nx-1OCuO-i8M7nYOm4VV2Y~qshF1qvYvy1VuHVFu-kEE3ADpP3eG5cYGtRCg6WDZvr85wLynXGZip8EcRVTlbkOefy4HA__"
+            summary:
+              "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
+            image:
+              "https://s3-alpha-sig.figma.com/img/d8c0/5123/cb94633149b6a4ffaf91d68921482bfb?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iglD42em8H7MjF0K45x4eQsPCzsmVcEtgvwP1xU58YdX9PeE-pD38Vmms9zab-uZGCbQCwPzbb0xcwQM8xtHl3fBWZWaIC4t610kG4nukOJosbIaHThzdEGVUsxx65SCFU9S17GmypQVKh3tExf7384fGRhW2lJg1ztfm2Js7BUIC5NWAJCW-rMXuF1WPo3gGg54F79f0T8i58D9GwGjlfIERTNtN8QikwHdKH27ysfk3HL2Bt0-NXvK1Nx-1OCuO-i8M7nYOm4VV2Y~qshF1qvYvy1VuHVFu-kEE3ADpP3eG5cYGtRCg6WDZvr85wLynXGZip8EcRVTlbkOefy4HA__",
           },
           {
             tag: "Ακαδημία Αθηνών",
-            title: "Πανηγυρική Συνεδρία για τον Εορτασμό της Επετείου της 28ης Οκτωβρίου 1940...",
+            title:
+              "Πανηγυρική Συνεδρία για τον Εορτασμό της Επετείου της 28ης Οκτωβρίου 1940...",
             date: "23 Οκτωβρίου 2023",
-            summary: "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
-            image: "https://s3-alpha-sig.figma.com/img/3983/3d1b/eaea17cc498c2bcbfb3c42f648ea3645?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WCfYdzINc94p-74yBaNGvLrRBf2rJNmOj7XLg0-qav9TZ6Zw4bi8aAzS7plKZpHAUedvUA3UtdfNU4MUG5lDAnuDTA4wdNKqKb09HHxiLHJ4l~oPscsjviDsW5NUbuxOlm-5JtN7ChYuJJBPwZhkqVEU2kRJJguS~Mf5Sj5~vMC3W2uA4rB4RNxDGpES-sIhS8lYQFge8Bi7M72y7arr6uBdelZfbmqzVoCk2lc7regofC9k6yKvj92TTYrvmQFN~PwlcWVSoeKemQSukp~6CrEgGaNlauSyI83KMXT66NlfyihK3GPPsQaImYfMh~n2H2fzQciquUQUnslpFxnZTQ__"
+            summary:
+              "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας. Η ουσία της χρήσης του Lorem ...",
+            image:
+              "https://s3-alpha-sig.figma.com/img/3983/3d1b/eaea17cc498c2bcbfb3c42f648ea3645?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WCfYdzINc94p-74yBaNGvLrRBf2rJNmOj7XLg0-qav9TZ6Zw4bi8aAzS7plKZpHAUedvUA3UtdfNU4MUG5lDAnuDTA4wdNKqKb09HHxiLHJ4l~oPscsjviDsW5NUbuxOlm-5JtN7ChYuJJBPwZhkqVEU2kRJJguS~Mf5Sj5~vMC3W2uA4rB4RNxDGpES-sIhS8lYQFge8Bi7M72y7arr6uBdelZfbmqzVoCk2lc7regofC9k6yKvj92TTYrvmQFN~PwlcWVSoeKemQSukp~6CrEgGaNlauSyI83KMXT66NlfyihK3GPPsQaImYfMh~n2H2fzQciquUQUnslpFxnZTQ__",
           },
-      ],
+        ],
         announcements: [],
       },
       readMoreButtonText: "Διαβάστε περισσότερα",
@@ -639,27 +127,57 @@ export const pageContent = {
         {
           title: "Ακαδημία Αθηνών",
           buttonText: "Πλοηγηθείτε",
-          image: "https://s3-alpha-sig.figma.com/img/b21c/de22/db75266f44d113898093b196d8625b7f?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FB6csERiRUDp93hoGEOJRIqBwPBeKkBo23Tb6769hhPY9X9xvXwQT6ztWIU7zA-Le1zZ4vHEHb~rj4-0Os8fercMEosrLFfXma8LWp6Ie0akFJZt8U5wQw1RojqHTcsPG5GN4SBDY8lbDRNUoRSivuulteIeBpp~7Foy~67Jr9mPw4~oyxqAHjytZaUybg4NY1Ov64bWkZ4niEoigCmYxZ40HY57QEgbrCj7hk3bY~SH31xEWTc~mslJJnZxrVw~-uVudlqcKoBSQFtHUZLvW06Px0EiycqxFKROnV~YLkIv23a8vpn8TqLhLtYyJzDWpkxB0Q2XFYxdc03108VwJQ__",
-          url: "#"
+          image:
+            "https://s3-alpha-sig.figma.com/img/b21c/de22/db75266f44d113898093b196d8625b7f?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FB6csERiRUDp93hoGEOJRIqBwPBeKkBo23Tb6769hhPY9X9xvXwQT6ztWIU7zA-Le1zZ4vHEHb~rj4-0Os8fercMEosrLFfXma8LWp6Ie0akFJZt8U5wQw1RojqHTcsPG5GN4SBDY8lbDRNUoRSivuulteIeBpp~7Foy~67Jr9mPw4~oyxqAHjytZaUybg4NY1Ov64bWkZ4niEoigCmYxZ40HY57QEgbrCj7hk3bY~SH31xEWTc~mslJJnZxrVw~-uVudlqcKoBSQFtHUZLvW06Px0EiycqxFKROnV~YLkIv23a8vpn8TqLhLtYyJzDWpkxB0Q2XFYxdc03108VwJQ__",
+          url: "#",
         },
         {
           title: "Αποθετήριο Ακαδημίας",
           buttonText: "Εξερευνήστε",
-          image: "https://s3-alpha-sig.figma.com/img/1c88/fa67/123ec7b0dd88e64c339c3f1bbac335df?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oW6tzGNFKRiNICopSnl3LDJsCSjOkFQhRlPEoSaPomhxK6ag9ZCjeDIpzDZaSQ9mpJv13Zp-5yYcbru0JQm3uUrpyAuvzm~TX6hW3lURAS2WeLdKoon4KM3vnnSb3va6BLBtde8KdUiTHxsgqtPUJfQ9llpd6mLkQNopf~C3Di5dOvfFkVbHcufHQr1C2UFJ8pUt6JFjNtgaDBiOe74Ovm09CMZgkXkstqIwnklNEaxzJQqM01JDQf~36EIin0ZsAFtuHp61510dmMWH6aPAHnI-vcc-iuJRuORAINuUdNQ5h4SOTkcLMlzLs6dln0~SjhO-vlnX2WjyVsQmV73sHw__",
-          url: "#"
+          image:
+            "https://s3-alpha-sig.figma.com/img/1c88/fa67/123ec7b0dd88e64c339c3f1bbac335df?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oW6tzGNFKRiNICopSnl3LDJsCSjOkFQhRlPEoSaPomhxK6ag9ZCjeDIpzDZaSQ9mpJv13Zp-5yYcbru0JQm3uUrpyAuvzm~TX6hW3lURAS2WeLdKoon4KM3vnnSb3va6BLBtde8KdUiTHxsgqtPUJfQ9llpd6mLkQNopf~C3Di5dOvfFkVbHcufHQr1C2UFJ8pUt6JFjNtgaDBiOe74Ovm09CMZgkXkstqIwnklNEaxzJQqM01JDQf~36EIin0ZsAFtuHp61510dmMWH6aPAHnI-vcc-iuJRuORAINuUdNQ5h4SOTkcLMlzLs6dln0~SjhO-vlnX2WjyVsQmV73sHw__",
+          url: "#",
         },
         {
           title: "Κεντρική Βιβλιοθήκη",
           buttonText: "Πλοηγηθείτε",
-          image: "https://s3-alpha-sig.figma.com/img/def0/9740/964766a0415a7da619b856944c266571?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CKAun4181-L9ByD9JgPtp9A5H9xdRwzLlz42O~Zf46SaxabSUNRZ8Mfo-qr9lpzdPwgxBX~2FDsmSE6S11QApkvJkxbeVKlOJdqB5o~NPR1nt4TDDpA4Itfin3qkpK5qPh7L0PrbE7IxNMjnIqGOrpM8nOOmu4zsaedzStAdhbAgBYOL69AZwAeUF4fAK-T82tIULv14KdMqJeq0aQdVViDiMr0H4ZqwxohnuzsmfOF2AIxtFwTvozkGa~Qf3omo67H853xuGiD1LppBbM1KZIQQOBzoYWg1TwONNP-BuL6ZEnK4R9IuRE6-A~SwppnxTA0Sw4d5B9sPZH83Saz7Bg__",
-          url: "#"
+          image:
+            "https://s3-alpha-sig.figma.com/img/def0/9740/964766a0415a7da619b856944c266571?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CKAun4181-L9ByD9JgPtp9A5H9xdRwzLlz42O~Zf46SaxabSUNRZ8Mfo-qr9lpzdPwgxBX~2FDsmSE6S11QApkvJkxbeVKlOJdqB5o~NPR1nt4TDDpA4Itfin3qkpK5qPh7L0PrbE7IxNMjnIqGOrpM8nOOmu4zsaedzStAdhbAgBYOL69AZwAeUF4fAK-T82tIULv14KdMqJeq0aQdVViDiMr0H4ZqwxohnuzsmfOF2AIxtFwTvozkGa~Qf3omo67H853xuGiD1LppBbM1KZIQQOBzoYWg1TwONNP-BuL6ZEnK4R9IuRE6-A~SwppnxTA0Sw4d5B9sPZH83Saz7Bg__",
+          url: "#",
         },
-    ],
+      ],
     },
     editions: {
       title: "Εκδόσεις",
       text: "Είναι πλέον κοινά παραδεκτό ότι ένας αναγνώστης αποσπάται από το περιεχόμενο που διαβάζει, όταν εξετάζει τη διαμόρφωση μίας σελίδας",
-    }
+      books: [
+        {
+          title: "Χρηστικό λεξικότης Νεοελληνικής Γλώσσας",
+          url: "#",
+          image:
+            "https://s3-alpha-sig.figma.com/img/f719/212a/9d74e7c4b890b0c1c49c1756f2361a4e?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OLf6e4dsi0gKVmHeoa1ZxwBcO2RMFzlrzCWJD-YM9Pd67DqgnivYPXms0gJRj-NnT2Xv1UDMIm-zM5StqyhlMbc39m--2Nk3xwRZY8X9KLDk4Luh6gsZBmFBw4o7YXCEIxEnSy6-S~UXR3TcIVO-3JDR~~hxJlm5kjJPtOb2ujCu~y0RnEUqZ4N1~uZv5jHh1KyJvX1rueJP2WZRy3634B00QI3Vp~j8Pbo3zchqiSuF8SlyPWNhUJddi6ptTCbqpG2h2KYkNGG4~uDhdTrcv75LLNJs866EqQVtT0xEvQx9ENF1uu15qkg-Z7mzMeYK3CUx5SRlWmLBH00AsJxBBA__",
+        },
+        {
+          title: "Κώδικας Ηθικής και Επαγγελματικής Συμπεριφοράς Υπαλλήλ..",
+          url: "#",
+          image:
+            "https://s3-alpha-sig.figma.com/img/8c4a/6761/e681b565e3ed85345344563706507e08?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Sp4S4aM0lIac2ialmFSwTPxZUrfysLC2xVYufNIdgqfSDEdTDkFInAXYjU-wai2-TuyCkoxo-vTq0OCXvwRDUnlzKpXEjAGmahTB0m7c23~8Ks8a~9bSIAAWNPnfJO0Xn2qPAlGL8iImEV6GyBXwOomUQ5lmtIOiaZUR9VTvUPkbmHR84SZnV5frE74yTdxFFthB38gsAH~1OVZYkpuFnIB8ml41rb7LW8Sd5Nm~qoPSQOjkob91F6EVyCkpGr3yUraw5UyMDKF-hvhqC20uF7H0Bwv1aQ3gBabmfYRs4evsUvv4kqJTMqupNJ0Ki4FAJZ15UovzC1nmRwyRVjmBCg__",
+        },
+        {
+          title: "Εκδόσεις Κέντρον Ερεύνης της Ελληνικής Λαογραφίας",
+          url: "#",
+          image:
+            "https://s3-alpha-sig.figma.com/img/f719/212a/9d74e7c4b890b0c1c49c1756f2361a4e?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OLf6e4dsi0gKVmHeoa1ZxwBcO2RMFzlrzCWJD-YM9Pd67DqgnivYPXms0gJRj-NnT2Xv1UDMIm-zM5StqyhlMbc39m--2Nk3xwRZY8X9KLDk4Luh6gsZBmFBw4o7YXCEIxEnSy6-S~UXR3TcIVO-3JDR~~hxJlm5kjJPtOb2ujCu~y0RnEUqZ4N1~uZv5jHh1KyJvX1rueJP2WZRy3634B00QI3Vp~j8Pbo3zchqiSuF8SlyPWNhUJddi6ptTCbqpG2h2KYkNGG4~uDhdTrcv75LLNJs866EqQVtT0xEvQx9ENF1uu15qkg-Z7mzMeYK3CUx5SRlWmLBH00AsJxBBA__",
+        },
+        {
+          title:
+            "Εκδόσεις Κέντρον Ερεύνης Νεοελληνικών Διαλέκτων και Ιδιωμάτων Ι.Λ.Ν.Ε",
+          url: "#",
+          image:
+            "https://s3-alpha-sig.figma.com/img/f719/212a/9d74e7c4b890b0c1c49c1756f2361a4e?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OLf6e4dsi0gKVmHeoa1ZxwBcO2RMFzlrzCWJD-YM9Pd67DqgnivYPXms0gJRj-NnT2Xv1UDMIm-zM5StqyhlMbc39m--2Nk3xwRZY8X9KLDk4Luh6gsZBmFBw4o7YXCEIxEnSy6-S~UXR3TcIVO-3JDR~~hxJlm5kjJPtOb2ujCu~y0RnEUqZ4N1~uZv5jHh1KyJvX1rueJP2WZRy3634B00QI3Vp~j8Pbo3zchqiSuF8SlyPWNhUJddi6ptTCbqpG2h2KYkNGG4~uDhdTrcv75LLNJs866EqQVtT0xEvQx9ENF1uu15qkg-Z7mzMeYK3CUx5SRlWmLBH00AsJxBBA__",
+        },
+      ],
+    },
   },
   footer: {
     contact: {
@@ -692,8 +210,8 @@ export const pageContent = {
           title: "Προκηρύξεις",
           url: "/",
         },
-      ]
+      ],
     },
     reserved: "© 2023 Dotsoft. All Rights Reserved.",
-  }
+  },
 };

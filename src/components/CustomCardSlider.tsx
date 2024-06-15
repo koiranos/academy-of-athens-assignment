@@ -1,17 +1,20 @@
-// import Carousel from "react-multi-carousel";
 import { Card } from "antd";
 import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 import styled, { css } from "styled-components";
 import Slider from "react-slick";
+
+import { pageContent } from "../misc/data";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import "react-multi-carousel/lib/styles.css";
-import { pageContent } from "../misc/data";
-
 import researchHome from "../assets/research_image.png";
 
-function CustomCardSlider() {
+interface CustomCardSliderProps {
+  category: { title: string; url: string; image?: string }[];
+}
+
+function CustomCardSlider({ category }: CustomCardSliderProps) {
   const SampleNextArrow = (props) => {
     const { onClick } = props;
     return (
@@ -67,28 +70,42 @@ function CustomCardSlider() {
   };
 
   const getCardItems = () => {
-    return pageContent.home.research.centers.map((centerItem, id) => {
+    return category.map((centerItem, id) => {
       return (
         <a key={`anchor_${id}`} href={centerItem.url}>
-          <ResearchCard key={`card_${id}`}>
-            <div
-              style={{
-                width: "108px",
-                height: "108px",
-                backgroundColor: "#dff2ff99",
-                borderRadius: "50%",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
+          <ResearchCard
+            $hasImage={centerItem.image !== undefined}
+            key={`card_${id}`}
+          >
+            {centerItem.image !== undefined ? (
               <img
                 style={{
-                  width: "48px",
-                  margin: "auto",
+                  width: "180px",
+                  height: "180px",
+                  // objectFit: "cover",
                 }}
-                src={researchHome}
+                src={centerItem.image}
               />
-            </div>
+            ) : (
+              <div
+                style={{
+                  width: "108px",
+                  height: "108px",
+                  backgroundColor: "#dff2ff99",
+                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <img
+                  style={{
+                    width: "48px",
+                    margin: "auto",
+                  }}
+                  src={researchHome}
+                />
+              </div>
+            )}
             <span
               style={{
                 height: "40px",
@@ -112,13 +129,17 @@ function CustomCardSlider() {
 
 export default CustomCardSlider;
 
-const ResearchCard = styled(Card)`
+interface ResearchCardProps {
+  $hasImage: boolean;
+}
+
+const ResearchCard = styled(Card)<ResearchCardProps>`
   width: 242px;
   height: 270px;
 
   .ant-card-body {
     height: 100%;
-    margin: 14px auto;
+    margin: ${(p) => (p.$hasImage ? "-15px auto 0 auto" : "14px auto;")}
     display: flex;
     flex-direction: column;
     justify-content: space-around;

@@ -5,16 +5,13 @@ import { DownOutlined, SearchOutlined, MenuOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 import ReactCountryFlag from "react-country-flag";
 
-import { mainData } from "../misc/data";
 import { useWindowSize } from "../misc/useWIndowSize";
 
-// import Container from "react-bootstrap/Container";
-// import Navbar from "react-bootstrap/Navbar";
-// import Nav from "react-bootstrap/esm/Nav";
-// import NavDropdown from "react-bootstrap/esm/NavDropdown";
-// import { useToggleDropDown } from "../misc/useToggleDropDown";
+interface NavigationBarProps {
+  navData: any;
+}
 
-function NavigationBar() {
+function NavigationBar({ navData }: NavigationBarProps) {
   const [showMenu, setShowMenu] = useState<boolean>(true);
   const [showDrawer, setShowDrawer] = useState<boolean>(false);
 
@@ -30,87 +27,32 @@ function NavigationBar() {
     }
   }, [menuMode]);
 
-  // antd
   const getMenuItems = () => {
-    return mainData.items.map((item, id) => {
-      return {
-        label:
-          item.submenu.length > 0 ? (
-            <CustomMenuItem>
-              {item.name} <DownOutlined />
-            </CustomMenuItem>
-          ) : (
-            <CustomMenuItem>{item.name}</CustomMenuItem>
-          ),
-        key: `${item.name}_${id}`,
-        theme: "light",
-        children: item.submenu.map((subItem, id) => {
-          return {
-            label: <CustomMenuItem>{subItem.name}</CustomMenuItem>,
-            key: `${subItem.name}_${id}`,
-          };
-        }),
-      };
-    });
+    if (navData) {
+      console.log("useState data: ", navData);
+      return navData.items.map((item, id: number) => {
+        return {
+          label:
+            item.submenu.length > 0 ? (
+              <CustomMenuItem>
+                {item.name} <DownOutlined />
+              </CustomMenuItem>
+            ) : (
+              <CustomMenuItem>{item.name}</CustomMenuItem>
+            ),
+          key: `${item.name}_${id}`,
+          theme: "light",
+          children: item.submenu.map((subItem, id: number) => {
+            return {
+              label: <CustomMenuItem>{subItem.name}</CustomMenuItem>,
+              key: `${subItem.name}_${id}`,
+            };
+          }),
+        };
+      });
+    }
   };
 
-  // // bootstrap
-
-  // const getMenuItems = () => {
-  //   return mainData.items.map((item, id) => {
-  //     const customDropDownTitle = (
-  //       <span>
-  //         {item.name} <DownOutlined style={{ fontSize: "12px" }} />
-  //       </span>
-  //     );
-  //     if (item.submenu.length > 0) {
-  //       const dropDownActions = useToggleDropDown();
-  //       return (
-  //         <NavDropdown
-  //           title={customDropDownTitle}
-  //           key={`dropdown_menu_item_${id}`}
-  //           {...dropDownActions}
-  //           children={item.submenu.map((subItem, subId) => {
-  //             return (
-  //               <NavDropdown.Item
-  //                 key={`sub_menu_item_${subId}`}
-  //                 href={`${subItem.url}`}
-  //               >
-  //                 {subItem.name}
-  //               </NavDropdown.Item>
-  //             );
-  //           })}
-  //           id="basic-nav-dropdown"
-  //         ></NavDropdown>
-  //       );
-  //     } else {
-  //       return (
-  //         <Nav.Link key={`menu_item_${id}`} href={`${item.url}`}>
-  //           {item.name}
-  //         </Nav.Link>
-  //       );
-  //     }
-  //   });
-  // };
-
-  // return (
-  //   // bootstrap
-  //   <div style={{ backgroundColor: "#1B4965" }}>
-  //     <Navbar expand="lg" className="bg-transparent">
-  //       <Container>
-  //         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  //         <Navbar.Collapse>
-  //           <Nav className="ms-auto me-4 ">{getMenuItems()}</Nav>
-  //           <Navbar.Text>
-  //             Signed in as: <a href="#login">Mark Otto</a>
-  //           </Navbar.Text>
-  //         </Navbar.Collapse>
-  //       </Container>
-  //     </Navbar>
-  //   </div>
-  // );
-
-  // antd
   return (
     <NavigationMenuContainer $menuType={menuMode} $isMenuVisible={showMenu}>
       {menuMode === "inline" ? (

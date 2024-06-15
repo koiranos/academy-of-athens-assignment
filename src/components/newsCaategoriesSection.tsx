@@ -22,15 +22,7 @@ function NewsCategoriesSection() {
     ) {
       if (newsItemIndex !== 0) {
         previewItems.push(
-          <div
-            key={`news_item_container_${newsItemIndex}`}
-            style={{
-              width: "100%",
-              height: "180px",
-              display: "flex",
-              flexDirection: "row",
-            }}
-          >
+          <PreviewItemContainer key={`news_item_container_${newsItemIndex}`}>
             <PreviewNewsItemImage
               key={`news_item_image_${newsItemIndex}`}
               src={selectedCategoryItems[newsItemIndex].image}
@@ -52,7 +44,7 @@ function NewsCategoriesSection() {
                 {selectedCategoryItems[0].date}
               </NewsItemDate>
             </div>
-          </div>
+          </PreviewItemContainer>
         );
       }
     }
@@ -108,6 +100,13 @@ function NewsCategoriesSection() {
 }
 
 export default NewsCategoriesSection;
+
+const PreviewItemContainer = styled.div`
+  width: 100%;
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+`;
 
 const NewsCategories = styled(Segmented)`
   border-radius: 52px !important;
@@ -173,10 +172,14 @@ const DetailedNewsItemImage = styled.img`
   aspect-ratio: 4/3;
 `;
 
-const NewsItemTag = styled.p`
-  margin: 8px 0 4px 0;
+const NewsItemBaseStyles = css`
   font-size: 14px;
   font-weight: 400;
+`;
+
+const NewsItemTag = styled.p`
+  margin: 8px 0 4px 0;
+  ${NewsItemBaseStyles}
   color: #138cd3;
 `;
 
@@ -188,22 +191,19 @@ const NewsItemTitle = styled.h2`
 `;
 
 const NewsItemDate = styled.p`
-  font-size: 14px;
-  font-weight: 400;
+  ${NewsItemBaseStyles}
   line-height: 24px;
   color: #122f4099;
 `;
 
 const DetailedNewsItemSummary = styled.p`
-  font-size: 14px;
-  font-weight: 400;
+  ${NewsItemBaseStyles}
   line-height: 24px;
   color: #122f40e5;
 `;
 
 const DetailedNewsItemReadMore = styled.a`
-  font-size: 14px;
-  font-weight: 400;
+  ${NewsItemBaseStyles}
   line-height: 14px;
   color: #138cd3;
 `;

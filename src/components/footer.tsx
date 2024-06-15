@@ -63,12 +63,3 @@ const InformationSectionContainer = styled.div<InformationSectionProps>`
   width: 100%;
   height: ${(p) => (p.$menuType === "horizontal" ? "250px" : "fit-content")};
 `;
-
-// const InformationSection = styled.div<InformationSectionProps>`
-//   background-color: #1b4965;
-//   height: ${(p) => (p.$menuType === "horizontal" ? "250px" : "fit-content")};
-//   display: flex;
-//   flex-direction: ${(p) => (p.$menuType === "horizontal" ? "row" : "column")};
-//   justify-content: space-evenly;
-//   align-items: center;
-// `;

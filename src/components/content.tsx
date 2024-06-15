@@ -38,7 +38,7 @@ function ContentSection() {
           title={pageContent.home.research.title}
           text={pageContent.home.research.text}
         />
-        <CustomCardSlider />
+        <CustomCardSlider category={pageContent.home.research.centers} />
         <AnchorAsButton $isAlternativeThemeEnabled={false} href="#">
           {pageContent.home.research.buttonText}
         </AnchorAsButton>
@@ -70,6 +70,24 @@ function ContentSection() {
         <a href="#">
           <BannerImage src={banner2} />
         </a>
+      </div>
+
+      <div
+        style={{
+          backgroundColor: "#F9F9F9",
+          width: "100%",
+          paddingBottom: "20px",
+        }}
+      >
+        <CustomSectionText
+          isLineVisible={true}
+          title={pageContent.home.editions.title}
+          text={pageContent.home.editions.text}
+        />
+        <CustomCardSlider category={pageContent.home.editions.books} />
+        <AnchorAsButton $isAlternativeThemeEnabled={false} href="#">
+          {pageContent.home.research.buttonText}
+        </AnchorAsButton>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { pageContent } from "../misc/data";
 import MoreInfoItem from "./moreInfoItem";
 
@@ -17,19 +18,17 @@ function MoreInfoSection() {
   };
 
   return (
-    <div
-      style={{
-        width: "70%",
-        margin: "0 auto",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
-      {getMoreInfoItems()}
-    </div>
+    <MoreInfoSectionContainer>{getMoreInfoItems()}</MoreInfoSectionContainer>
   );
 }
 
 export default MoreInfoSection;
+
+const MoreInfoSectionContainer = styled.div`
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;

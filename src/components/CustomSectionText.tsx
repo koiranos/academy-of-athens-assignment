@@ -22,21 +22,10 @@ function CustomSectionText({
       >
         <SectionTitle $isLivePresent={isLineVisible}>
           {title}
-          {isLineVisible && (
-            <span
-              style={{
-                width: "100px",
-                borderBottom: "2px solid #138cd3",
-                position: "absolute",
-                bottom: "-6px",
-                left: "0",
-              }}
-            ></span>
-          )}
+          {isLineVisible && <LineDetail></LineDetail>}
         </SectionTitle>
       </div>
       {text.length > 0 && <SectionText>{text}</SectionText>}
-      {/* {text.length > 0 && <SectionText>{text}</SectionText>} */}
     </SectionTextContainer>
   );
 }
@@ -69,4 +58,12 @@ const SectionText = styled.p`
   line-height: 32px;
   width: 90%;
   margin: auto;
+`;
+
+const LineDetail = styled.span`
+  width: 100px;
+  border-bottom: 2px solid #138cd3;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
 `;

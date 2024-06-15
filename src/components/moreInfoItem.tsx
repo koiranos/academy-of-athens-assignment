@@ -12,16 +12,7 @@ function MoreInfoItem({ title, buttonText, image, url }: MoreInfoItemProps) {
   return (
     <MoreInfoItemContainer>
       <div style={{ position: "absolute", left: "48%", top: "35%" }}>
-        <div
-          style={{
-            position: "relative",
-            left: "-50%",
-            top: "-35%",
-            border: "dotted red 1px",
-            color: "white",
-            zIndex: "9999",
-          }}
-        >
+        <MoreInfoContent>
           <div style={{ width: "168px" }}>
             <p
               style={{
@@ -30,14 +21,12 @@ function MoreInfoItem({ title, buttonText, image, url }: MoreInfoItemProps) {
               }}
             >
               {title}
-              {/* {pageContent.home.more.items[0].title} */}
             </p>
             <AnchorAsButton $isAlternativeThemeEnabled={true} href={url}>
               {buttonText}
-              {/* {pageContent.home.more.items[0].buttonText} */}
             </AnchorAsButton>
           </div>
-        </div>
+        </MoreInfoContent>
       </div>
       <BaseImage src={image}></BaseImage>
     </MoreInfoItemContainer>
@@ -67,4 +56,13 @@ const MoreInfoItemContainer = styled.div`
     height: 100%;
     background-color: #1b496572;
   }
+`;
+
+const MoreInfoContent = styled.div`
+  position: relative;
+  left: -50%;
+  top: -35%;
+  border: dotted red 1px;
+  color: white;
+  z-index: 9999;
 `;
