@@ -10,6 +10,9 @@ const GlobalStyles = createGlobalStyle`
   padding: 0;
   margin: 0;
   font-family: "Noto Serif", serif;
+  a{
+    text-decoration: none;
+  }
 }
 `;
 

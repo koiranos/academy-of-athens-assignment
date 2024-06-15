@@ -53,10 +53,37 @@ export const InformationItemText = styled.span`
 `;
 
 export const ExternalLink = styled.a`
-  text-decoration: none;
   color: #fff;
 
   &:hover {
     color: #138cd3;
+  }
+`;
+
+interface AnchorAsButtonProps {
+  $isAlternativeThemeEnabled: boolean;
+}
+
+export const AnchorAsButton = styled.a<AnchorAsButtonProps>`
+  width: 168px;
+  height: 51px;
+  border: ${(p) =>
+    p.$isAlternativeThemeEnabled ? "1px solid #fff" : "1px solid #138cd399"};
+  border-radius: 30px;
+  display: block;
+  margin-inline: auto;
+  margin-top: 30px;
+  color: ${(p) => (p.$isAlternativeThemeEnabled ? "#fff" : "#138cd3")};
+  background-color: ${(p) =>
+    p.$isAlternativeThemeEnabled ? "transparent" : undefined};
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 51px;
+
+  &:hover {
+    background-color: #138dd3e5;
+    color: #fff;
+    border: 1px solid #138cd399;
   }
 `;

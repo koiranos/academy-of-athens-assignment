@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 
-import { Menu, Button, Tooltip, Drawer } from "antd";
+import { Menu, Button, Tooltip, Drawer, Select } from "antd";
 import { DownOutlined, SearchOutlined, MenuOutlined } from "@ant-design/icons";
 import styled from "styled-components";
+import ReactCountryFlag from "react-country-flag";
 
 import { mainData } from "../misc/data";
 import { useWindowSize } from "../misc/useWIndowSize";
@@ -171,6 +172,46 @@ function NavigationBar() {
         <Tooltip title="αναζήτηση" placement="bottom">
           <SearchButton icon={<SearchButtonIcon />} type="text"></SearchButton>
         </Tooltip>
+        <CountrySelect
+          defaultValue="GR"
+          style={{ marginRight: "20px" }}
+          options={[
+            {
+              value: "GR",
+              label: (
+                <span>
+                  <ReactCountryFlag
+                    svg
+                    style={{
+                      width: "1.6em",
+                      height: "1.6em",
+                      marginRight: "4px",
+                    }}
+                    countryCode="GR"
+                  />
+                  ΕΛ
+                </span>
+              ),
+            },
+            {
+              value: "EN",
+              label: (
+                <span>
+                  <ReactCountryFlag
+                    svg
+                    style={{
+                      width: "1.6em",
+                      height: "1.61em",
+                      marginRight: "4px",
+                    }}
+                    countryCode="US"
+                  />
+                  EN
+                </span>
+              ),
+            },
+          ]}
+        />
       </SearchButtonContainer>
     </NavigationMenuContainer>
   );
@@ -242,8 +283,11 @@ const NavigationMenu = styled(Menu)<NavigationMenuProps>`
 const SearchButtonContainer = styled.div<NavigationMenuProps>`
   height: 80px;
   line-height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   .ant-btn {
-    margin-right: 20px;
+    /* margin-right: 20px; */
     margin-inline: ${(p) => (p.$menuType === "inline" ? "10px" : undefined)};
   }
 `;
@@ -282,6 +326,20 @@ const CustomDrawer = styled(Drawer)`
   }
   .ant-drawer-body {
     padding: 0;
+  }
+`;
+
+const CountrySelect = styled(Select)`
+  .ant-select-selector {
+    background-color: transparent !important;
+    border: none !important;
+    color: #fff;
+    &:hover {
+      border: none;
+    }
+  }
+  .ant-select-arrow {
+    color: #fff;
   }
 `;
 
