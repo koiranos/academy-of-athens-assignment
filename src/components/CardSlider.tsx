@@ -13,7 +13,7 @@ interface CardSliderProps {
 }
 
 function CardSlider({ category }: CardSliderProps) {
-  const SampleNextArrow = (props) => {
+  const SampleNextArrow = (props: any) => {
     const { onClick } = props;
     return (
       <CustomNextArrowButton onClick={onClick}>
@@ -22,7 +22,7 @@ function CardSlider({ category }: CardSliderProps) {
     );
   };
 
-  const SamplePrevArrow = (props) => {
+  const SamplePrevArrow = (props: any) => {
     const { onClick } = props;
     return (
       <CustomPrevArrowButton onClick={onClick}>

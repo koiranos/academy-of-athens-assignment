@@ -18,7 +18,7 @@ function PublicationsPage() {
   };
 
   const handlePublicationItems = () => {
-    return publicationsData?.nodes.map((node: any) => {
+    return publicationsData.nodes.map((node: any) => {
       return {
         key: `pn_${node.id}`,
         label: <span>{node.title}</span>,
