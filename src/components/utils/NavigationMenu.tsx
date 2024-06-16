@@ -17,7 +17,8 @@ function NavigationMenu() {
           label:
             item.submenu.length > 0 ? (
               <CustomMenuItem
-              // href={item.url}
+                to="/"
+                // href={item.url}
               >
                 {item.name} <DownOutlined />
               </CustomMenuItem>
