@@ -275,7 +275,7 @@ export const pageContent: pageContentInterface = {
   },
   footer: {
     contact: {
-      title: "ΕΠΙΚΟΙΝΟΝΙΑ",
+      title: "ΕΠΙΚΟΙΝΩΝΙΑ",
       address: "Πανεπιστημίου 28, 106 79 Αθήνα",
       phone: "Τ: 210 3634700",
       fax: "F: 210 3634806",
