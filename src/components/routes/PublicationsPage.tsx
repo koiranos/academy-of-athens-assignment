@@ -18,34 +18,38 @@ function PublicationsPage() {
   };
 
   const handlePublicationItems = () => {
-    return publicationsData.nodes.map((node: any) => {
-      return {
-        key: `pn_${node.id}`,
-        label: <span>{node.title}</span>,
-        children: (
-          <NodeContainer>
-            <div>
-              {node.image.length > 0 ? (
-                <NodeImage
-                  src={node.image.length > 0 ? node.image[0].url : ""}
-                />
-              ) : (
-                <NoData text="Μη Διαθέσιμη Εικόνα" />
-              )}
-            </div>
-            <NodeDescription>
-              <p>
-                <span style={{ fontWeight: "600" }}>Συγγραφέας:</span>{" "}
-                {node.author}
-              </p>
-              <p style={{ textIndent: "20px", textAlign: "justify" }}>
-                {stripHtml(node.body)}
-              </p>
-            </NodeDescription>
-          </NodeContainer>
-        ),
-      };
-    });
+    if (publicationsData) {
+      return publicationsData.nodes.map((node: any) => {
+        return {
+          key: `pn_${node.id}`,
+          label: <span>{node.title}</span>,
+          children: (
+            <NodeContainer>
+              <div>
+                {node.image.length > 0 ? (
+                  <NodeImage
+                    src={node.image.length > 0 ? node.image[0].url : ""}
+                  />
+                ) : (
+                  <NoData text="Μη Διαθέσιμη Εικόνα" />
+                )}
+              </div>
+              <NodeDescription>
+                <p>
+                  <span style={{ fontWeight: "600" }}>Συγγραφέας:</span>{" "}
+                  {node.author}
+                </p>
+                <p style={{ textIndent: "20px", textAlign: "justify" }}>
+                  {stripHtml(node.body)}
+                </p>
+              </NodeDescription>
+            </NodeContainer>
+          ),
+        };
+      });
+    } else {
+      return [];
+    }
   };
 
   const getSubMenuItems = () => {
