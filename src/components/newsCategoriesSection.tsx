@@ -6,7 +6,9 @@ import { PageDataContext } from "./context/contexts";
 
 function NewsCategoriesSection() {
   const pageContent = useContext(PageDataContext);
-  const [selectedSegment, setSelectedSegment] = useState("lectures");
+  const [selectedSegment, setSelectedSegment] = useState<
+    "events" | "lectures" | "announcements"
+  >("lectures");
   const [selectedCategoryItems, setSelectedCategoryItems] = useState(
     pageContent.home.news.items[selectedSegment]
   );
@@ -58,8 +60,14 @@ function NewsCategoriesSection() {
         size="large"
         options={pageContent.home.news.categories}
         defaultValue={selectedSegment}
-        onChange={(value) => {
-          if (typeof value === "string") {
+        onChange={(
+          value: "events" | "lectures" | "announcements" | unknown
+        ) => {
+          if (
+            value === "events" ||
+            value === "lectures" ||
+            value === "announcements"
+          ) {
             setSelectedSegment(value);
           }
         }}
