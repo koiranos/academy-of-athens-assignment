@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import researchHome from "../assets/research_image.png";
+import { Link } from "react-router-dom";
 
 interface CardSliderProps {
   category: { title: string; url: string; image?: string }[];
@@ -70,7 +71,7 @@ function CardSlider({ category }: CardSliderProps) {
   const getCardItems = () => {
     return category.map((cardItem, id) => {
       return (
-        <a key={`anchor_${id}`} href={cardItem.url}>
+        <Link key={`anchor_${id}`} to={cardItem.url}>
           <CardWrapper
             $hasImage={cardItem.image !== undefined}
             key={`card_${id}`}
@@ -84,7 +85,7 @@ function CardSlider({ category }: CardSliderProps) {
             )}
             <CardTitle>{cardItem.title}</CardTitle>
           </CardWrapper>
-        </a>
+        </Link>
       );
     });
   };

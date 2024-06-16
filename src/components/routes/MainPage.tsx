@@ -11,6 +11,7 @@ import NewsCategoriesSection from "../newsCategoriesSection";
 import MoreInfoSection from "../moreInfoSection";
 import { useContext } from "react";
 import { PageDataContext } from "../context/contexts";
+import { Link } from "react-router-dom";
 
 function MainPage() {
   const pageContent = useContext(PageDataContext);
@@ -23,9 +24,9 @@ function MainPage() {
         text={pageContent.home.welcome.text}
       />
       <BannerImageContainer>
-        <a href="#">
+        <Link to="/">
           <BannerImage src={banner1} />
-        </a>
+        </Link>
       </BannerImageContainer>
 
       <SectionContainer>
@@ -57,9 +58,9 @@ function MainPage() {
       </div>
 
       <BannerImageContainer>
-        <a href="#">
+        <Link to="/">
           <BannerImage src={banner2} />
-        </a>
+        </Link>
       </BannerImageContainer>
 
       <SectionContainer>

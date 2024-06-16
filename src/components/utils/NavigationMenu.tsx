@@ -4,6 +4,7 @@ import { Menu } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { useContext } from "react";
 import { MenuContext } from "../context/contexts";
+import { Link } from "react-router-dom";
 
 function NavigationMenu() {
   const menuMode = useWindowSize("horizontal");
@@ -22,7 +23,7 @@ function NavigationMenu() {
               </CustomMenuItem>
             ) : (
               <CustomMenuItem
-                href={item.url}
+                to={item.url}
                 onClick={() => {
                   localStorage.setItem(
                     "selectedMenuItem",
@@ -39,7 +40,7 @@ function NavigationMenu() {
             return {
               label: (
                 <CustomMenuItem
-                  href={subItem.url}
+                  to={subItem.url}
                   onClick={() => {
                     localStorage.setItem(
                       "selectedMenuItem",
@@ -116,7 +117,7 @@ const Navigation = styled(Menu)<NavigationMenuProps>`
   }
 `;
 
-const CustomMenuItem = styled.a`
+const CustomMenuItem = styled(Link)`
   font-size: 16px;
   font-weight: 400;
 `;

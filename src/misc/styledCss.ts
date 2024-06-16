@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 interface InformationItemProps {
@@ -35,7 +36,7 @@ export const SocialLinksContainer = styled.div`
   gap: 20px;
 `;
 
-export const SocialItem = styled.a`
+export const SocialItem = styled(Link)`
   background-color: #f9f9f919;
   width: 48px;
   height: 48px;

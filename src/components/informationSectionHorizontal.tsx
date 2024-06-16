@@ -3,6 +3,7 @@ import academiaLogo from "../assets/akadimia_Logo.png";
 import { useContext } from "react";
 import { PageDataContext } from "./context/contexts";
 import SocialButtons from "./utils/SocialButtons";
+import { Link } from "react-router-dom";
 
 function InformationSectionHorizontal() {
   const pageContent = useContext(PageDataContext);
@@ -21,9 +22,9 @@ function InformationSectionHorizontal() {
   return (
     <infoStyles.HorizontalSection>
       <infoStyles.InformationItem $widthProp="240px">
-        <a href="/">
+        <Link to="/">
           <infoStyles.AcademiaLogo src={academiaLogo} />
-        </a>
+        </Link>
         <SocialButtons />
       </infoStyles.InformationItem>
       <infoStyles.InformationItem $widthProp="260px">

@@ -3,6 +3,7 @@ import { Segmented } from "antd";
 import { useContext, useEffect, useState } from "react";
 import NoData from "./utils/NoData";
 import { PageDataContext } from "./context/contexts";
+import { Link } from "react-router-dom";
 
 function NewsCategoriesSection() {
   const pageContent = useContext(PageDataContext);
@@ -86,7 +87,7 @@ function NewsCategoriesSection() {
               <DetailedNewsItemSummary>
                 {selectedCategoryItems[0].summary}
               </DetailedNewsItemSummary>
-              <DetailedNewsItemReadMore href="#">
+              <DetailedNewsItemReadMore to="/">
                 {pageContent.home.news.readMoreButtonText}
               </DetailedNewsItemReadMore>
             </DetailedNewsItem>
@@ -203,7 +204,7 @@ const DetailedNewsItemSummary = styled.p`
   color: #122f40e5;
 `;
 
-const DetailedNewsItemReadMore = styled.a`
+const DetailedNewsItemReadMore = styled(Link)`
   ${NewsItemBaseStyles}
   line-height: 14px;
   color: #138cd3;

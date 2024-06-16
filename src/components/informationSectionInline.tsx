@@ -6,6 +6,7 @@ import academiaLogo from "../assets/akadimia_Logo.png";
 import { useContext } from "react";
 import { PageDataContext } from "./context/contexts";
 import SocialButtons from "./utils/SocialButtons";
+import { Link } from "react-router-dom";
 
 function InformationSectionInline() {
   const pageContent = useContext(PageDataContext);
@@ -24,9 +25,9 @@ function InformationSectionInline() {
   return (
     <>
       <InformationItem>
-        <a href="/">
+        <Link to="/">
           <infoStyles.AcademiaLogo src={academiaLogo} />
-        </a>
+        </Link>
         <SocialButtons />
       </InformationItem>
       <CustomDivider />
