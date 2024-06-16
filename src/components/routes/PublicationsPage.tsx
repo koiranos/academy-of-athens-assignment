@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { useContext } from "react";
 import { Collapse } from "antd";
-import { useWindowSize } from "../../misc/useWindowSize";
+import { useWindowSize } from "../useWindowSize";
 import { PublicationsContext, PageDataContext } from "../context/contexts";
 import NoData from "../utils/NoData";
 

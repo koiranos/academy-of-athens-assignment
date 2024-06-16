@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 import espaLogo from "../assets/espa.png";
-import { useWindowSize } from "../misc/useWindowSize";
+import { useWindowSize } from "./useWindowSize";
 import InformationSectionHorizontal from "./informationSectionHorizontal";
 import InformationSectionInline from "./informationSectionInline";
 import { useContext } from "react";

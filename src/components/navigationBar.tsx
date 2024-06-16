@@ -5,7 +5,7 @@ import { SearchOutlined, MenuOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 import ReactCountryFlag from "react-country-flag";
 
-import { useWindowSize } from "../misc/useWindowSize";
+import { useWindowSize } from "./useWindowSize";
 
 import NavigationMenu from "./utils/NavigationMenu";
 
