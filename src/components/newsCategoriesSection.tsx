@@ -1,9 +1,11 @@
 import styled, { css } from "styled-components";
-import { pageContent } from "../misc/data";
-import { Segmented, Empty } from "antd";
-import { useEffect, useState } from "react";
+import { Segmented } from "antd";
+import { useContext, useEffect, useState } from "react";
+import NoData from "./utils/NoData";
+import { PageDataContext } from "./context/contexts";
 
 function NewsCategoriesSection() {
+  const pageContent = useContext(PageDataContext);
   const [selectedSegment, setSelectedSegment] = useState("lectures");
   const [selectedCategoryItems, setSelectedCategoryItems] = useState(
     pageContent.home.news.items[selectedSegment]
@@ -83,16 +85,7 @@ function NewsCategoriesSection() {
             <PreviewNewsItems>{getPreviewNewsItems()}</PreviewNewsItems>
           </>
         ) : (
-          <Empty
-            style={{ margin: "0 auto" }}
-            image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
-            imageStyle={{ height: 60 }}
-            description={
-              <span style={{ color: "gray" }}>
-                Δεν υπάρχουν δεδομένα για αυτήν την κατηγορία
-              </span>
-            }
-          ></Empty>
+          <NoData text="Δεν υπάρχουν δεδομένα για αυτήν την κατηγορία" />
         )}
       </NewsItemsContainer>
     </>

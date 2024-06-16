@@ -1,8 +1,10 @@
 import styled from "styled-components";
-import { pageContent } from "../misc/data";
 import MoreInfoItem from "./moreInfoItem";
+import { useContext } from "react";
+import { PageDataContext } from "./context/contexts";
 
 function MoreInfoSection() {
+  const pageContent = useContext(PageDataContext);
   const getMoreInfoItems = () => {
     return pageContent.home.more.items.map((item, id) => {
       return (

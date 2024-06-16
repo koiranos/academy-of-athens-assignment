@@ -6,7 +6,7 @@ interface CustomSectionTextProps {
   text?: string;
 }
 
-function CustomSectionText({
+function SectionText({
   isLineVisible = false,
   title,
   text = "",
@@ -25,12 +25,12 @@ function CustomSectionText({
           {isLineVisible && <LineDetail></LineDetail>}
         </SectionTitle>
       </div>
-      {text.length > 0 && <SectionText>{text}</SectionText>}
+      {text.length > 0 && <SectionSubText>{text}</SectionSubText>}
     </SectionTextContainer>
   );
 }
 
-export default CustomSectionText;
+export default SectionText;
 
 interface SectionTitleProps {
   $isLivePresent: boolean;
@@ -53,7 +53,7 @@ const SectionTitle = styled.p<SectionTitleProps>`
   margin-bottom: 1rem;
 `;
 
-const SectionText = styled.p`
+const SectionSubText = styled.p`
   font-size: 16px;
   line-height: 32px;
   width: 90%;

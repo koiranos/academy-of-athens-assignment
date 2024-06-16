@@ -3,18 +3,16 @@ import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 import styled, { css } from "styled-components";
 import Slider from "react-slick";
 
-import { pageContent } from "../misc/data";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import researchHome from "../assets/research_image.png";
 
-interface CustomCardSliderProps {
+interface CardSliderProps {
   category: { title: string; url: string; image?: string }[];
 }
 
-function CustomCardSlider({ category }: CustomCardSliderProps) {
+function CardSlider({ category }: CardSliderProps) {
   const SampleNextArrow = (props) => {
     const { onClick } = props;
     return (
@@ -70,51 +68,22 @@ function CustomCardSlider({ category }: CustomCardSliderProps) {
   };
 
   const getCardItems = () => {
-    return category.map((centerItem, id) => {
+    return category.map((cardItem, id) => {
       return (
-        <a key={`anchor_${id}`} href={centerItem.url}>
-          <ResearchCard
-            $hasImage={centerItem.image !== undefined}
+        <a key={`anchor_${id}`} href={cardItem.url}>
+          <CardWrapper
+            $hasImage={cardItem.image !== undefined}
             key={`card_${id}`}
           >
-            {centerItem.image !== undefined ? (
-              <img
-                style={{
-                  width: "180px",
-                  height: "180px",
-                  // objectFit: "cover",
-                }}
-                src={centerItem.image}
-              />
+            {cardItem.image !== undefined ? (
+              <CardImage src={cardItem.image} />
             ) : (
-              <div
-                style={{
-                  width: "108px",
-                  height: "108px",
-                  backgroundColor: "#dff2ff99",
-                  borderRadius: "50%",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                <img
-                  style={{
-                    width: "48px",
-                    margin: "auto",
-                  }}
-                  src={researchHome}
-                />
-              </div>
+              <ImageContainer>
+                <AlternativeImage src={researchHome} />
+              </ImageContainer>
             )}
-            <span
-              style={{
-                height: "40px",
-                color: "#1B4965",
-              }}
-            >
-              {centerItem.title}
-            </span>
-          </ResearchCard>
+            <CardTitle>{cardItem.title}</CardTitle>
+          </CardWrapper>
         </a>
       );
     });
@@ -127,13 +96,13 @@ function CustomCardSlider({ category }: CustomCardSliderProps) {
   );
 }
 
-export default CustomCardSlider;
+export default CardSlider;
 
 interface ResearchCardProps {
   $hasImage: boolean;
 }
 
-const ResearchCard = styled(Card)<ResearchCardProps>`
+const CardWrapper = styled(Card)<ResearchCardProps>`
   width: 242px;
   height: 270px;
 
@@ -147,6 +116,31 @@ const ResearchCard = styled(Card)<ResearchCardProps>`
     align-items: center;
     text-align: center;
   }
+`;
+
+const ImageContainer = styled.div`
+  width: 108px;
+  height: 108px;
+  background-color: #dff2ff99;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+`;
+
+const AlternativeImage = styled.img`
+  width: 48px;
+  margin: auto;
+`;
+
+const CardImage = styled.img`
+  width: 180px;
+  height: 180px;
+  // object-fit: cover;
+`;
+
+const CardTitle = styled.div`
+  height: 40px;
+  color: #1b4965;
 `;
 
 const CustomArrowButton = css`

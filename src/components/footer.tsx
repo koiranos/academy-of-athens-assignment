@@ -1,14 +1,15 @@
 import { styled } from "styled-components";
 
 import espaLogo from "../assets/espa.png";
-import { useWindowSize } from "../misc/useWIndowSize";
+import { useWindowSize } from "../misc/useWindowSize";
 import InformationSectionHorizontal from "./informationSectionHorizontal";
 import InformationSectionInline from "./informationSectionInline";
-
-import { pageContent } from "../misc/data";
+import { useContext } from "react";
+import { PageDataContext } from "./context/contexts";
 
 function FooterSection() {
   const menuMode = useWindowSize("horizontal");
+  const pageContent = useContext(PageDataContext);
   return (
     <div>
       <InformationSectionContainer $menuType={menuMode}>

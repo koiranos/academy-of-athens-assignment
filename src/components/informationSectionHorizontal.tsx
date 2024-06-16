@@ -1,9 +1,11 @@
-import { pageContent } from "../misc/data";
-
 import * as infoStyles from "../misc/styledCss";
 import academiaLogo from "../assets/akadimia_Logo.png";
+import { useContext } from "react";
+import { PageDataContext } from "./context/contexts";
+import SocialButtons from "./utils/SocialButtons";
 
 function InformationSectionHorizontal() {
+  const pageContent = useContext(PageDataContext);
   const handleInfoListItems = () => {
     return pageContent.footer.info.list.map((item, id) => {
       return (
@@ -19,12 +21,10 @@ function InformationSectionHorizontal() {
   return (
     <infoStyles.HorizontalSection>
       <infoStyles.InformationItem $widthProp="240px">
-        <infoStyles.AcademiaLogo src={academiaLogo} />
-        <infoStyles.SocialLinksContainer>
-          <infoStyles.SocialItem />
-          <infoStyles.SocialItem />
-          <infoStyles.SocialItem />
-        </infoStyles.SocialLinksContainer>
+        <a href="/">
+          <infoStyles.AcademiaLogo src={academiaLogo} />
+        </a>
+        <SocialButtons />
       </infoStyles.InformationItem>
       <infoStyles.InformationItem $widthProp="260px">
         <infoStyles.InformationItemTitle>

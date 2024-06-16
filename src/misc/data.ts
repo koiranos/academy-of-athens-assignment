@@ -1,4 +1,93 @@
-export const pageContent = {
+export interface pageContentInterface {
+  home: {
+    welcome: {
+      title: string;
+      text: string;
+    };
+    research: {
+      title: string;
+      text: string;
+      buttonText: string;
+      centers: {
+        title: string;
+        url: string;
+      }[];
+    };
+    news: {
+      title: string;
+      categories: {
+        label: string;
+        value: string;
+      }[];
+      items: {
+        events: {
+          tag: string;
+          title: string;
+          date: string;
+          summary: string;
+          image: string;
+        }[];
+        lectures: {
+          tag: string;
+          title: string;
+          date: string;
+          summary: string;
+          image: string;
+        }[];
+        announcements: {
+          tag: string;
+          title: string;
+          date: string;
+          summary: string;
+          image: string;
+        }[];
+      };
+      readMoreButtonText: string;
+    };
+    more: {
+      title: string;
+      items: {
+        title: string;
+        buttonText: string;
+        image: string;
+        url: string;
+      }[];
+    };
+    editions: {
+      title: string;
+      text: string;
+      books: {
+        title: string;
+        url: string;
+        image: string;
+      }[];
+    };
+  };
+  publications: {
+    print: {
+      title: string;
+    };
+  };
+  footer: {
+    contact: {
+      title: string;
+      address: string;
+      phone: string;
+      fax: string;
+      email: string;
+    };
+    info: {
+      title: string;
+      list: {
+        title: string;
+        url: string;
+      }[];
+    };
+    reserved: string;
+  };
+}
+
+export const pageContent: pageContentInterface = {
   home: {
     welcome: {
       title: "Καλώς ήρθατε στη δικτυακή πύλη της Ακαδημίας Αθηνών",
@@ -177,6 +266,11 @@ export const pageContent = {
             "https://s3-alpha-sig.figma.com/img/f719/212a/9d74e7c4b890b0c1c49c1756f2361a4e?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OLf6e4dsi0gKVmHeoa1ZxwBcO2RMFzlrzCWJD-YM9Pd67DqgnivYPXms0gJRj-NnT2Xv1UDMIm-zM5StqyhlMbc39m--2Nk3xwRZY8X9KLDk4Luh6gsZBmFBw4o7YXCEIxEnSy6-S~UXR3TcIVO-3JDR~~hxJlm5kjJPtOb2ujCu~y0RnEUqZ4N1~uZv5jHh1KyJvX1rueJP2WZRy3634B00QI3Vp~j8Pbo3zchqiSuF8SlyPWNhUJddi6ptTCbqpG2h2KYkNGG4~uDhdTrcv75LLNJs866EqQVtT0xEvQx9ENF1uu15qkg-Z7mzMeYK3CUx5SRlWmLBH00AsJxBBA__",
         },
       ],
+    },
+  },
+  publications: {
+    print: {
+      title: "Έντυπα Δημοσιεύματα της Ακαδημίας Αθηνών",
     },
   },
   footer: {

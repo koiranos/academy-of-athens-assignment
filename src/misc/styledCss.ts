@@ -35,11 +35,16 @@ export const SocialLinksContainer = styled.div`
   gap: 20px;
 `;
 
-export const SocialItem = styled.div`
+export const SocialItem = styled.a`
   background-color: #f9f9f919;
   width: 48px;
   height: 48px;
   border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 20px;
+  }
 `;
 
 export const InformationItemTitle = styled.span`

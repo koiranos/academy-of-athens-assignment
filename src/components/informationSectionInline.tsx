@@ -1,12 +1,14 @@
 import { Collapse, Divider } from "antd";
 import { styled } from "styled-components";
 
-import { pageContent } from "../misc/data";
-
 import * as infoStyles from "../misc/styledCss";
 import academiaLogo from "../assets/akadimia_Logo.png";
+import { useContext } from "react";
+import { PageDataContext } from "./context/contexts";
+import SocialButtons from "./utils/SocialButtons";
 
 function InformationSectionInline() {
+  const pageContent = useContext(PageDataContext);
   const handleInfoListItems = () => {
     return pageContent.footer.info.list.map((item, id) => {
       return (
@@ -22,12 +24,10 @@ function InformationSectionInline() {
   return (
     <>
       <InformationItem>
-        <infoStyles.AcademiaLogo src={academiaLogo} />
-        <infoStyles.SocialLinksContainer>
-          <infoStyles.SocialItem />
-          <infoStyles.SocialItem />
-          <infoStyles.SocialItem />
-        </infoStyles.SocialLinksContainer>
+        <a href="/">
+          <infoStyles.AcademiaLogo src={academiaLogo} />
+        </a>
+        <SocialButtons />
       </InformationItem>
       <CustomDivider />
       <CollapsibleInfo

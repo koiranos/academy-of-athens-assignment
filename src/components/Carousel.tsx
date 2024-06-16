@@ -5,7 +5,7 @@ import img1 from "../assets/home_page_img_1.jpeg";
 import img2 from "../assets/home_page_img_2.jpeg";
 import img3 from "../assets/home_page_img_4.jpeg";
 
-function CustomCarousel() {
+function CarouselWrapper() {
   const onChange = (currentSlide: number) => {
     console.log(currentSlide);
   };
@@ -30,7 +30,7 @@ function CustomCarousel() {
   );
 }
 
-export default CustomCarousel;
+export default CarouselWrapper;
 
 const CarouselItem = styled.img`
   margin: 0;
